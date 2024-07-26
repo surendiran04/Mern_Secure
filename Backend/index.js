@@ -8,7 +8,6 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const cookieSession = require("cookie-session");
 const { googleAuth,currentUser } = require("./Controllers/Authentication.controller");
 let PORT= process.env.PORT;
-const BACKEND_URL=process.env.BACKEND_URL
 const FRONTEND_URL = process.env.FRONTEND_URL;
 const BACKEND_URL=process.env.BACKEND_URL
 const {AuthModel} = require("./Models/userModel")
