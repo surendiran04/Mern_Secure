@@ -10,6 +10,7 @@ const { googleAuth,currentUser } = require("./Controllers/Authentication.control
 let PORT= process.env.PORT;
 const BACKEND_URL=process.env.BACKEND_URL
 const FRONTEND_URL = process.env.FRONTEND_URL;
+const BACKEND_URL=process.env.BACKEND_URL
 const {AuthModel} = require("./Models/userModel")
 
 const app=express();
