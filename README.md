@@ -6,12 +6,20 @@ Mern Secure is a secure web application built using the MERN stack (MongoDB, Exp
 
 ### Frontend
 - **Pages**:
-  - **Login Page**
+  - **Login Page** <br>
    ![Login Page](./images/Login.png)
   - **Signup Page**
+    ![SignUp Page](./images/SignUp.png)
   - **Forgot Password Page**
+    ![ForgotPassword Page](./images/ForgotPassword.png)
   - **Reset Password Page**
+    ![ResetPassword Page](./images/ResetPassword.png)
   - **Dashboard Page**
+    ![Dashboard Page](./images/Dashboard.png)
+  - **Reset Password Work Flow**
+       ![Reset Password work flow img](./images/DB_PASS_Reset.png)
+   - **Google OAuth Work Flow**
+       ![Google Oauth work flow img](./images/Google_OAuth.png)
 - **Authentication & Authorization**: JWT tokens are used to ensure secure access.
 - **Dynamic Routing**: Routes are dynamically managed to ensure smooth navigation.
 - **Notifications**: Success and error messages are displayed using React-Toastify.
