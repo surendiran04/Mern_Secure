@@ -7,6 +7,7 @@ Mern Secure is a secure web application built using the MERN stack (MongoDB, Exp
 ### Frontend
 - **Pages**:
   - **Login Page**
+   ![Login Page](./images/Login.png)
   - **Signup Page**
   - **Forgot Password Page**
   - **Reset Password Page**
