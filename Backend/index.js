@@ -9,6 +9,7 @@ const cookieSession = require("cookie-session");
 const { googleAuth,currentUser } = require("./Controllers/Authentication.controller");
 let PORT= process.env.PORT;
 const FRONTEND_URL = process.env.FRONTEND_URL;
+const BACKEND_URL=process.env.BACKEND_URL
 const {AuthModel} = require("./Models/userModel")
 
 const app=express();
@@ -40,7 +41,7 @@ app.use(
       {
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: "/auth/google/callback",
+        callbackURL: `${BACKEND_URL}/auth/google/callback`,
       },
       async (accessToken, refreshToken, profile, done) => {
         try {
