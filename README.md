@@ -2,6 +2,8 @@
 
 Mern Secure is a secure web application built using the MERN stack (MongoDB, Express, React, Node.js). It features authentication and authorization using JWT tokens, Google OAuth integration, dynamic routing, and various other technologies for a seamless user experience.
 
+ <a href="https://drive.google.com/file/d/115HjnJDKEiHBCNv8cDJWKpLaNV-NaF8r/view?usp=drive_link">Demo Video</a>
+
 ## Features
 
 ### Frontend
@@ -48,7 +50,7 @@ Mern Secure is a secure web application built using the MERN stack (MongoDB, Exp
    git clone https://github.com/surendiran04/mern-secure.git
    cd mern-secure
 
-  <a href="https://drive.google.com/file/d/115HjnJDKEiHBCNv8cDJWKpLaNV-NaF8r/view?usp=drive_link">Demo Video</a>
+ 
 
 
 
