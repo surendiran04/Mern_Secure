@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const cookieSession = require("cookie-session");
-const { googleAuth,currentUser } = require("./Controllers/Authentication.controller");
+const { googleAuth,currentUser,sendMail } = require("./Controllers/Authentication.controller");
 let PORT= process.env.PORT;
 const FRONTEND_URL = process.env.FRONTEND_URL;
 const BACKEND_URL=process.env.BACKEND_URL
@@ -25,6 +25,8 @@ app.use("/", router);
 router.post("/auth/google/callback", googleAuth);
 router.get('/current_user',currentUser);
 
+router.post('/sendMail',sendMail); //portfolio related
+
 app.use(
     cookieSession({
       name: "session",
@@ -36,6 +38,7 @@ app.use(
   // Passport configuration
   app.use(passport.initialize());
 
+  
   passport.use(
     new GoogleStrategy(
       {

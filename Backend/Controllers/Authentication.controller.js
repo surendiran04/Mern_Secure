@@ -232,6 +232,46 @@ const forgotPassword = async (req, res) => {
 };
 
 
+const sendMail = async (req, res) => {  //message sent from portfolio
+  const data = req.body;
+  try {
+  
+      if (data) {
+        const options = {
+          from: {
+            name: "Portfolio Manager",
+            address: process.env.EMAIL_USER,
+          },
+          to: process.env.myemail,
+          subject: "Message from Postfolio",
+          html: `<h3>Name: ${data.name}</h3>
+                <h3>EMail: ${data.email}</h3>
+                <h5>${data.subject}</h5>`,
+        };
+
+        // Send Email
+        transporter.sendMail(options, function (err, info) {
+          if (err) {
+            return res.status(400).json({
+              success: false,
+              message: "Error occured!Try after sometime",
+            });
+          } else {
+            return res
+              .status(200)
+              .json({ success: true, message: "Email Sent successfully" });
+          }
+        });
+      }
+    } catch (error) {
+    return res.status(500).send({
+      success: false,
+      error: error.message,
+    });
+  }
+};
+
+
 const updatePass = async (req, res) => {
   const {password} = req.body;
 
@@ -273,4 +313,4 @@ const updatePass = async (req, res) => {
   }
 };
 
-module.exports = { createUser, signInUser,googleAuth,currentUser, forgotPassword, updatePass};
+module.exports = { createUser, signInUser,googleAuth,currentUser, forgotPassword, updatePass,sendMail};
